@@ -85,6 +85,19 @@ class LightTheme {
     );
   }
 
+  ElevatedButtonThemeData get elevatedButtonTheme {
+    return ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(Dimens.dp8),
+        ),
+        backgroundColor: primaryColor,
+        foregroundColor: scaffoldcolor,
+        textStyle: textTheme.titleMedium,
+      ),
+    );
+  }
+
   ThemeData get theme {
     return ThemeData(
       colorScheme: ColorScheme.light(
@@ -99,16 +112,7 @@ class LightTheme {
       appBarTheme: appBarTheme,
       cardTheme: cardTheme,
       bottomNavigationBarTheme: bottomNavigationBarTheme,
-      elevatedButtonTheme: ElevatedButtonThemeData(
-        style: ElevatedButton.styleFrom(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(Dimens.dp8),
-          ),
-          backgroundColor: primaryColor,
-          foregroundColor: scaffoldcolor,
-          textStyle: textTheme.titleMedium,
-        ),
-      ),
+      elevatedButtonTheme: elevatedButtonTheme,
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
           shape: RoundedRectangleBorder(
