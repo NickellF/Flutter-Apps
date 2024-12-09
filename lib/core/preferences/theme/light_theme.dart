@@ -7,7 +7,7 @@ class LightTheme {
   final Color primaryColor;
 
   final Color errorColor = AppColors.red;
-  final Color scaffoldcolor = AppColors.white;
+  final Color scaffoldcolor = AppColors.putih;
   final Color textSolidColor = AppColors.black;
   final Color borderColor = AppColors.white;
   final Color disabledColor = AppColors.black;
