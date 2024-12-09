@@ -22,11 +22,7 @@ class AppColors {
     600: Color(0xff28A96B),
     800: Color(0xff1E8051),
   });
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> db672e6feff5e0ccd5a7d1e16cfce498bff63f4e
   static const yellow = MaterialColor(0xffFFD101, {
     200: Color(0xffFFDF4C),
     400: Color(0xffFFD51A),
