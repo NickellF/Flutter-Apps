@@ -59,6 +59,15 @@ class AppColors {
   });
 
   static const white = MaterialColor(0xffE0E0E0, {
+    50: Color(0xffffffff),
+    200: Color(0xffFAFAFA),
+    400: Color(0xffF5F5F5),
+    600: Color(0xffCCCCCC),
+    800: Color(0xffB8B8B8),
+  });
+
+  static const putih = MaterialColor(0xffffffff, {
+    50: Color(0xffffffff),
     200: Color(0xffFAFAFA),
     400: Color(0xffF5F5F5),
     600: Color(0xffCCCCCC),
