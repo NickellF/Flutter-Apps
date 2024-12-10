@@ -11,7 +11,7 @@ class ProductPage extends StatelessWidget {
     return Scaffold(
       // appBar: AppBar(title: const Text('Produk')),
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(kToolbarHeight),
+        preferredSize: const Size.fromHeight(kToolbarHeight),
         child: Container(
           decoration: BoxDecoration(
             color: AppColors.white[50], // Background color for the AppBar
@@ -20,7 +20,7 @@ class ProductPage extends StatelessWidget {
                 color: Colors.black.withOpacity(0.1), // Shadow color
                 spreadRadius: 1, // Spread radius of the shadow
                 blurRadius: 3, // Blur radius of the shadow
-                offset: Offset(0, 2), // Offset for the shadow
+                offset: const Offset(0, 2), // Offset for the shadow
               ),
             ],
           ),
@@ -36,10 +36,15 @@ class ProductPage extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          TextFormField(),
           const Padding(
             padding: EdgeInsets.all(Dimens.defaultSize),
-            child: SubtitleText('3 Produk'),
+            child: SearchTextInput(
+              hintText: 'Search by product name or SKU',
+            ),
+          ),
+          const Padding(
+            padding: EdgeInsets.all(Dimens.defaultSize),
+            child: SubtitleText('5 Produk'),
           ),
           Expanded(
             child: ListView.separated(
@@ -49,7 +54,7 @@ class ProductPage extends StatelessWidget {
               separatorBuilder: (context, index) {
                 return Dimens.dp16.height;
               },
-              itemCount: 3,
+              itemCount: 5,
             ),
           )
         ],

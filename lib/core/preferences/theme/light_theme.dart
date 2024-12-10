@@ -9,8 +9,10 @@ class LightTheme {
   final Color errorColor = AppColors.red;
   final Color scaffoldcolor = AppColors.putih;
   final Color textSolidColor = AppColors.black;
+  final Color textDisableColor = AppColors.black[400]!;
   final Color borderColor = AppColors.white;
-  final Color disabledColor = AppColors.black;
+  final Color disabledColor = AppColors.black[200]!;
+  final Color inputColor = AppColors.white[400]!;
 
   TextTheme get textTheme => TextTheme(
         headlineLarge: TextStyle(
@@ -51,7 +53,7 @@ class LightTheme {
         labelMedium: TextStyle(
           fontSize: Dimens.dp12,
           fontWeight: FontWeight.normal,
-          color: textSolidColor,
+          color: textDisableColor,
         ),
       );
 
@@ -111,6 +113,39 @@ class LightTheme {
     );
   }
 
+  InputDecorationTheme get inputDecorationTheme {
+    return InputDecorationTheme(
+      fillColor: inputColor,
+      filled: true,
+      hintStyle: textTheme.labelMedium,
+      prefixIconColor: textDisableColor,
+      contentPadding: const EdgeInsets.symmetric(
+        horizontal: Dimens.defaultSize,
+        vertical: Dimens.dp12,
+      ),
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(Dimens.dp8),
+        borderSide: BorderSide(color: inputColor),
+      ),
+      disabledBorder:OutlineInputBorder(
+        borderRadius: BorderRadius.circular(Dimens.dp8),
+        borderSide: BorderSide(color: inputColor),
+      ), ,
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(Dimens.dp8),
+        borderSide: BorderSide(color: primaryColor),
+      ),
+      focusedErrorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(Dimens.dp8),
+        borderSide: BorderSide(color: primaryColor),
+      ),
+      errorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(Dimens.dp8),
+        borderSide: BorderSide(color: errorColor),
+      ),
+    );
+  }
+
   ThemeData get theme {
     return ThemeData(
       colorScheme: ColorScheme.light(
@@ -127,6 +162,7 @@ class LightTheme {
       bottomNavigationBarTheme: bottomNavigationBarTheme,
       elevatedButtonTheme: elevatedButtonTheme,
       outlinedButtonTheme: outlinedButtonTheme,
+      inputDecorationTheme: inputDecorationTheme,
     );
   }
 }
