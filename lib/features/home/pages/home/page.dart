@@ -16,16 +16,17 @@ class HomePage extends StatelessWidget {
             color: AppColors.white[50], // Background color for the AppBar
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(0.2), // Shadow color
-                spreadRadius: 2, // Spread radius of the shadow
-                blurRadius: 5, // Blur radius of the shadow
+                color: Colors.black.withOpacity(0.1), // Shadow color
+                spreadRadius: 1, // Spread radius of the shadow
+                blurRadius: 3, // Blur radius of the shadow
                 offset: Offset(0, 2), // Offset for the shadow
               ),
             ],
           ),
           child: AppBar(
             title: const Text('Beranda'),
-            backgroundColor: Colors.transparent, // Make AppBar background transparent
+            backgroundColor:
+                Colors.transparent, // Make AppBar background transparent
             elevation: 0, // Remove default elevation
           ),
         ),
