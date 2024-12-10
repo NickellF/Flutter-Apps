@@ -13,6 +13,7 @@ class ProductPage extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
+          TextFormField(),
           const Padding(
             padding: EdgeInsets.all(Dimens.defaultSize),
             child: SubtitleText('3 Produk'),
