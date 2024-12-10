@@ -98,6 +98,19 @@ class LightTheme {
     );
   }
 
+  OutlinedButtonThemeData get outlinedButtonTheme {
+    return OutlinedButtonThemeData(
+      style: OutlinedButton.styleFrom(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(Dimens.dp8),
+        ),
+        side: BorderSide(color: primaryColor),
+        foregroundColor: primaryColor,
+        textStyle: textTheme.titleMedium,
+      ),
+    );
+  }
+
   ThemeData get theme {
     return ThemeData(
       colorScheme: ColorScheme.light(
@@ -113,16 +126,7 @@ class LightTheme {
       cardTheme: cardTheme,
       bottomNavigationBarTheme: bottomNavigationBarTheme,
       elevatedButtonTheme: elevatedButtonTheme,
-      outlinedButtonTheme: OutlinedButtonThemeData(
-        style: OutlinedButton.styleFrom(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(Dimens.dp8),
-          ),
-          side: BorderSide(color: primaryColor),
-          foregroundColor: primaryColor,
-          textStyle: textTheme.titleMedium,
-        ),
-      ),
+      outlinedButtonTheme: outlinedButtonTheme,
     );
   }
 }

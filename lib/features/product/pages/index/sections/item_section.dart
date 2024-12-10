@@ -1,9 +1,7 @@
 part of '../page.dart';
 
 class _ItemSection extends StatelessWidget {
-  const _ItemSection({
-    super.key,
-  });
+  const _ItemSection();
 
   @override
   Widget build(BuildContext context) {
