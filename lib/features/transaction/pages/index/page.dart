@@ -9,21 +9,18 @@ class TransactionPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Transaksi')),
-        body:Column(
+        appBar: AppBar(title: const Text('Transaksi')),
+        body: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-           const _FilterSection(),
+            const _FilterSection(),
             Expanded(
               child: ListView(
-                padding:const EdgeInsets.all(Dimens.defaultSize),
-                children: const[
-                 Text('Item')
-                ],
+                padding: const EdgeInsets.all(Dimens.defaultSize),
+                children: const [Text('Item')],
               ),
             ),
           ],
-        )
-    );
+        ));
   }
 }
