@@ -25,9 +25,9 @@ class _ItemSection extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    RegularText.semiBold('Hanni NewJeans'),
+                    RegularText.semiBold('Rafif Boled Wenak'),
                     Dimens.dp4.height,
-                    RegularText.semiBold('Ga dijual'),
+                    RegularText.semiBold('Rp 20.000'),
                   ],
                 ),
               ),
