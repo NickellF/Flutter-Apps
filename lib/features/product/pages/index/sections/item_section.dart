@@ -14,7 +14,7 @@ class _ItemSection extends StatelessWidget {
               ClipRRect(
                 borderRadius: BorderRadius.circular(Dimens.dp8),
                 child: Image.network(
-                  'https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/c82992c0-5fd7-4ad3-84f7-28f24a3a7f45/width=450/hanni-v0,5-xl%20(2).jpeg',
+                  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTILWFviutjNbhB5qlL8rSQ1kPhcyFQBVV_rA&s',
                   width: 74,
                   height: 74,
                   fit: BoxFit.cover,
@@ -25,9 +25,9 @@ class _ItemSection extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    RegularText.semiBold('Hanni NewJeans'),
+                    RegularText.semiBold('Rafif Boled Wenak'),
                     Dimens.dp4.height,
-                    RegularText.semiBold('Ga dijual'),
+                    RegularText.semiBold('Rp 20.000'),
                   ],
                 ),
               ),
