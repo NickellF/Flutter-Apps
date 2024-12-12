@@ -5,8 +5,85 @@ class SettingsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(child: Text('Settings')),
+    return Scaffold(
+      body: ListView(
+        padding: const EdgeInsets.all(16.0),
+        children: [
+          const ListTile(
+            title: Text(
+              'Akun',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+          ),
+          const ListTile(
+            leading: Icon(Icons.business, color: Colors.black),
+            title: Text('Informasi Usaha'),
+            trailing: Icon(Icons.arrow_forward_ios, color: Colors.black),
+          ),
+          const ListTile(
+            leading: Icon(Icons.vpn_key, color: Colors.black),
+            title: Text('API Key Xendit'),
+            trailing: Icon(Icons.arrow_forward_ios, color: Colors.black),
+          ),
+          const Divider(height: 20),
+          const ListTile(
+            title: Text(
+              'Perangkat Tambahan',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+          ),
+          const ListTile(
+            leading: Icon(Icons.print, color: Colors.black),
+            title: Text('Printer'),
+            trailing: Icon(Icons.arrow_forward_ios, color: Colors.black),
+          ),
+          const ListTile(
+            leading: Icon(Icons.receipt, color: Colors.black),
+            title: Text('Atur Struk'),
+            trailing: Icon(Icons.arrow_forward_ios, color: Colors.black),
+          ),
+          const Divider(height: 20),
+          const ListTile(
+            title: Text(
+              'Info Lainnya',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+          ),
+          const ListTile(
+            leading: Icon(Icons.privacy_tip, color: Colors.black),
+            title: Text('Kebijakan Privasi'),
+            trailing: Icon(Icons.arrow_forward_ios, color: Colors.black),
+          ),
+          const ListTile(
+            leading: Icon(Icons.star, color: Colors.black),
+            title: Text('Beri Rating'),
+            trailing: Icon(Icons.arrow_forward_ios, color: Colors.black),
+          ),
+          const SizedBox(height: 20),
+          Center(
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.red,
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              onPressed: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SettingsPage()),
+                );
+              },
+              child: const Text(
+                'Keluar',
+                style: TextStyle(color: Colors.white, fontSize: 16),
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

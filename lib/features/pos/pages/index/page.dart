@@ -14,7 +14,7 @@ class POSPage extends StatelessWidget {
             color: AppColors.white[50],
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(0.1), 
+                color: Colors.black.withOpacity(0.1),
                 spreadRadius: 1,
                 blurRadius: 3,
                 offset: const Offset(0, 2),
@@ -23,11 +23,21 @@ class POSPage extends StatelessWidget {
           ),
           child: AppBar(
             title: const Text('POS'),
-            backgroundColor:
-                Colors.transparent, 
+            backgroundColor: Colors.transparent,
             elevation: 0,
           ),
         ),
+      ),
+      body: const Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Padding(
+            padding: EdgeInsets.all(Dimens.defaultSize),
+            child: SearchTextInput(
+              hintText: 'Search by product name or SKU',
+            ),
+          ),
+        ],
       ),
     );
   }

@@ -32,13 +32,14 @@ class _MainPageState extends State<MainPage> {
       body: pages[index],
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
-          color: AppColors.white[50], // Background color for the BottomNavigationBar
+          color: AppColors
+              .white[50], // Background color for the BottomNavigationBar
           boxShadow: [
             BoxShadow(
               color: Colors.black.withOpacity(0.1), // Less shadow color
               spreadRadius: 1, // Spread radius of the shadow
               blurRadius: 3, // Blur radius of the shadow
-              offset: Offset(0, -2), // Offset for the shadow (upward)
+              offset: const Offset(0, -2), // Offset for the shadow (upward)
             ),
           ],
         ),
