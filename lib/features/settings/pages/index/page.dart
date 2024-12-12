@@ -6,6 +6,27 @@ class SettingsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(kToolbarHeight),
+        child: Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.1),
+                spreadRadius: 1,
+                blurRadius: 3,
+                offset: const Offset(0, 2),
+              ),
+            ],
+          ),
+          child: AppBar(
+            title: const Text('Settings'),
+            backgroundColor: Colors.transparent,
+            elevation: 0,
+          ),
+        ),
+      ),
       body: ListView(
         padding: const EdgeInsets.all(16.0),
         children: [
